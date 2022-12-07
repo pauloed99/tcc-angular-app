@@ -1,0 +1,16 @@
+<div class="card" style="width: 18rem">
+  <div class="card-body">
+    <form [formGroup]="editForm" id="edit-form">
+      <label>Title:</label>
+      <input type="text" formControlName="title" />
+      <label>Author:</label>
+      <input type="text" formControlName="author" />
+      <button type="button" class="btn btn-primary" style="margin-top: 1rem" (click)="editPost()">
+        Atualizar
+      </button>
+      <button type="button" class="btn btn-danger" style="margin-top: 1rem" (click)="deletePost()">
+        Deletar
+      </button>
+    </form>
+  </div>
+</div>

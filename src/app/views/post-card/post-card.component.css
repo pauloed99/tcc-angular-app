@@ -1,0 +1,9 @@
+.card {
+    border-color: black;
+    margin-bottom: 2rem;
+}
+
+#edit-form {
+    display: flex;
+    flex-direction: column;
+}
