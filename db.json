@@ -1,26 +1,24 @@
 {
   "posts": [
     {
-      "title": "json-server",
-      "author": "typicode",
+      "title": "JavaScript",
+      "author": "Paulo",
       "id": 1
     },
     {
-      "title": "jsoa",
-      "author": "typicode",
+      "title": "TypeScript",
+      "author": "Maria",
       "id": 2
     },
     {
-      "title": "a",
-      "author": "a",
+      "title": "React ",
+      "author": "João",
       "id": 3
-    }
-  ],
-  "comments": [
+    },
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "title": "Angular",
+      "author": "Natália",
+      "id": 4
     }
   ],
   "profile": {
