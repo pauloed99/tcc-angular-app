@@ -1,0 +1,75 @@
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Adição de Post</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+          (click)="closeModal()"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="addForm" id="add-form">
+          <label>Title:</label>
+          <input
+            type="text"
+            formControlName="title"
+            [ngClass]="{
+              'invalid-field':
+                title?.invalid && (title?.dirty || title?.touched)
+            }"
+          />
+          <div
+            *ngIf="title?.invalid && (title?.dirty || title?.touched)"
+            class="alert alert-danger"
+          >
+            <div *ngIf="title?.errors?.['required']">Title is required.</div>
+          </div>
+          <label>Author:</label>
+          <input
+            type="text"
+            formControlName="author"
+            [ngClass]="{
+              'invalid-field':
+                author?.invalid && (author?.dirty || author?.touched)
+            }"
+          />
+          <div
+            *ngIf="author?.invalid && (author?.dirty || author?.touched)"
+            class="alert alert-danger"
+          >
+            <div *ngIf="author?.errors?.['required']">Author is required.</div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button
+          *ngIf="addForm.valid"
+          type="button"
+          class="btn btn-primary"
+          data-bs-dismiss="modal"
+          (click)="addPost()"
+        >
+          Save Post
+        </button>
+        <button
+          *ngIf="!addForm.valid"
+          type="button"
+          class="btn btn-primary"
+          (click)="addPost()"
+        >
+          Save Post
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

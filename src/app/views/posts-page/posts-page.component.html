@@ -1,32 +1,18 @@
 <div id="container">
-    <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" style="margin-bottom: 2rem;">
+  <button
+    type="button"
+    class="btn btn-primary"
+    data-bs-toggle="modal"
+    data-bs-target="#exampleModal"
+    style="margin-bottom: 2rem"
+  >
     Adicionar Post
-</button>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="exampleModalLabel">Adição de Post</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-            <form [formGroup]="addForm" id="add-form">
-                <label>Title:</label>
-                <input type="text" formControlName="title" />
-                <label>Author:</label>
-                <input type="text" formControlName="author" />
-            </form>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="addPost()">Save Post</button>
-        </div>
-      </div>
-    </div>
+  </button>
+  <app-post-modal (newPostsEvent)="getNewPosts($event)"></app-post-modal>
+  <div *ngFor="let post of posts">
+    <app-post-card
+      [post]="post"
+      (newPostsEvent)="getNewPosts($event)"
+    ></app-post-card>
   </div>
-    <div *ngFor="let post of posts">
-        <app-post-card [post]="post" (newPosts)="getNewPosts($event)"></app-post-card>
-    </div>    
 </div>

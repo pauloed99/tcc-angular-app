@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 import Post from 'src/app/models/post';
 import { PostsService } from 'src/app/services/posts.service';
 
@@ -13,27 +13,18 @@ export class PostsPageComponent implements OnInit {
 
   constructor(
     private postsService: PostsService,
-    private formBuilder: FormBuilder
+    private toastService: ToastrService
   ) {}
 
-  addForm = this.formBuilder.group({
-    title: [''],
-    author: [''],
-  });
-
   ngOnInit(): void {
-    this.postsService.getPosts().subscribe((posts) => (this.posts = posts));
+    this.postsService.getPosts().subscribe({
+      next: (posts) => (this.posts = posts),
+      error: () =>
+        this.toastService.error('Erro ao carregar os posts!', 'Post Status'),
+    });
   }
 
-  getNewPosts(newPosts: any) {
+  getNewPosts(newPosts: Post[]) {
     this.posts = newPosts;
-  }
-
-  addPost() {
-    this.postsService
-      .addPosts(this.addForm.value)
-      .subscribe(() =>
-        this.postsService.getPosts().subscribe((posts) => (this.posts = posts))
-      );
   }
 }
