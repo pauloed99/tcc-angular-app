@@ -1,27 +1,73 @@
-# AngularTccApp
+# Angular Crud-API
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.1.
+# Sobre o projeto
 
-## Development server
+Aplicação Web feita com o Framework Angular e o Framework Bootstrap com o intuito de demonstrar um CRUD de posts
+feito por meio do consumo de uma Rest API do json-server.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Ademais, na aplicação foram implementados testes unitários usando o Framework de testes Jasmine que o Angular já
+disponibiliza.
 
-## Code scaffolding
+## Layout web
+![Web 1](https://github.com/pauloed99/tcc-angular-app/blob/master/src/assets/readme/post-1.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![Web 2](https://github.com/pauloed99/tcc-angular-app/blob/master/src/assets/readme/post-2.png)
 
-## Build
+![Web 3](https://github.com/pauloed99/tcc-angular-app/blob/master/src/assets/readme/post-3.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![Web 4](https://github.com/pauloed99/tcc-angular-app/blob/master/src/assets/readme/post-4.png)
 
-## Running unit tests
+![Web 5](https://github.com/pauloed99/tcc-angular-app/blob/master/src/assets/readme/post-5.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+![Web 6](https://github.com/pauloed99/tcc-angular-app/blob/master/src/assets/readme/post-6.png)
 
-## Running end-to-end tests
+![Web 7](https://github.com/pauloed99/tcc-angular-app/blob/master/src/assets/readme/post-7.png)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![Web 8](https://github.com/pauloed99/tcc-angular-app/blob/master/src/assets/readme/post-8.png)
 
-## Further help
+![Web 9](https://github.com/pauloed99/tcc-angular-app/blob/master/src/assets/readme/post-9.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![Test 1](https://github.com/pauloed99/tcc-angular-app/blob/master/src/assets/readme/post-test-1.png)
+
+![Test 2](https://github.com/pauloed99/tcc-angular-app/blob/master/src/assets/readme/post-test-2.png)
+
+# Tecnologias utilizadas
+## Front end
+- HTML / CSS / JavaScript / TypeScript
+- Angular
+- Bootstrap
+
+# Como executar o projeto
+
+Pré-requisitos: npm 
+
+```bash
+# clonar repositório
+git clone https://github.com/pauloed99/tcc-angular-app
+
+# instalar dependências
+npm install
+
+# executar o projeto
+npm start
+```
+
+# Como executar o testes unitários do projeto
+
+Pré-requisitos: npm 
+
+```bash
+# executar os testes do projeto
+npm test --code-coverage
+
+# visualizar a cobertura dos testes da aplicação
+coverage/angular-tcc-app/app/index.html
+
+# abrir o arquivo acima em um navegador
+```
+
+# Autor
+
+Paulo Eduardo Dutra
+
+https://www.linkedin.com/in/paulo-eduardo-dutra/
