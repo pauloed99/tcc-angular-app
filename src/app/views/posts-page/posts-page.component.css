@@ -1,7 +1,19 @@
 #container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding-top: 2rem;
+  background-color: rgb(177, 177, 203);
+  min-height: 100vh;
+}
+
+#card-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-self: flex-start;
+}
+
+.post-card {
+  margin: 1rem;
 }

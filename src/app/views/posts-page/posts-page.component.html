@@ -9,10 +9,12 @@
     Adicionar Post
   </button>
   <app-post-modal (newPostsEvent)="getNewPosts($event)"></app-post-modal>
-  <div *ngFor="let post of posts">
-    <app-post-card
-      [post]="post"
-      (newPostsEvent)="getNewPosts($event)"
-    ></app-post-card>
+  <div id="card-container">
+    <div *ngFor="let post of posts" class="post-card">
+      <app-post-card
+        [post]="post"
+        (newPostsEvent)="getNewPosts($event)"
+      ></app-post-card>
+    </div>
   </div>
 </div>

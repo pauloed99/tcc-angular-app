@@ -1,4 +1,4 @@
-<div class="card" style="width: 18rem">
+<div class="card">
   <div class="card-body">
     <form [formGroup]="editForm" id="edit-form">
       <label>Title:</label>
@@ -9,11 +9,8 @@
           'invalid-field': title?.invalid && (title?.dirty || title?.touched)
         }"
       />
-      <div
-        *ngIf="title?.invalid && (title?.dirty || title?.touched)"
-        class="alert alert-danger"
-      >
-        <div *ngIf="title?.errors?.['required']">Title is required.</div>
+      <div *ngIf="title?.invalid && (title?.dirty || title?.touched)">
+        <p class="text-danger">Title is required.</p>
       </div>
       <label>Author:</label>
       <input
@@ -23,11 +20,8 @@
           'invalid-field': author?.invalid && (author?.dirty || author?.touched)
         }"
       />
-      <div
-        *ngIf="author?.invalid && (author?.dirty || author?.touched)"
-        class="alert alert-danger"
-      >
-        <div *ngIf="author?.errors?.['required']">Author is required.</div>
+      <div *ngIf="author?.invalid && (author?.dirty || author?.touched)">
+        <p class="text-danger">Author is required.</p>
       </div>
       <button
         type="button"

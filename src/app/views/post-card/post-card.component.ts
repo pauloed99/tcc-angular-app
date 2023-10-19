@@ -65,6 +65,8 @@ export class PostCardComponent implements OnInit {
       Object.keys(this.editForm.controls).forEach((control) => {
         this.editForm.get(control)?.markAsDirty();
       });
+
+      this.toastService.error('Erro ao atualizar o post!', 'Post Status');
     }
   }
 
